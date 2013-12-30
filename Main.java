@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.ArrayList;
 
-public class DataType {
+public class Main {
 	public static void main(String[] args) {
 		// Object
 		/*String atom = "atom";
