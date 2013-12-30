@@ -29,10 +29,24 @@ public class EmployeeManager {
 	}
 	
 	public static List<Employee> find(String searchKey) {
-		return null;
+		List<Employee> tmp = new ArrayList<>();
+		for (Employee e : employees){
+			if (e.getName().matches(".*" + searchKey + ".*") ||
+			    e.getPosition().matches(".*" + searchKey + ".*")) {
+				tmp.add(e);
+			}
+		}
+		return tmp;
 	}
 	
-	public static List<Employee> equalsTo(double salary) {
+	public static List<Employee> findBySalary(double salary) {
+		List<Employee> tmp = new ArrayList<>();
+		for (Employee e : employees){
+			if (e.getSalary() == salary) {
+				tmp.add(e);
+			}
+		}
+		return tmp;
 	}
 	
 	public static boolean delete(String name) {

@@ -39,7 +39,11 @@ public class DataType {
 		emManager.insert(atom);
 		//EmployeeManager.selectStar();
 		Employee result = EmployeeManager.findById(1);
-		System.out.println(result);
+		//System.out.println(result);
+		List<Employee> result2 = EmployeeManager.find("a");
+		System.out.println(result2);
+		List<Employee> result3 = EmployeeManager.findBySalary(50000);
+		System.out.println(result3);
  		
 	}
 }
