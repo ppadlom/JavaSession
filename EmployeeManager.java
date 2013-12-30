@@ -50,6 +50,14 @@ public class EmployeeManager {
 	}
 	
 	public static boolean delete(String name) {
+		List<Employee> tmp = new ArrayList<>();
+		for (Employee e : employees) {
+			if (e.getName().matches(".*" + name + ".*")) {
+				employees.remove(e);
+				return true;
+			}
+		
+		}
 		return false;
 	}
 	

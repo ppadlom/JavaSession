@@ -41,9 +41,14 @@ public class Main {
 		Employee result = EmployeeManager.findById(1);
 		//System.out.println(result);
 		List<Employee> result2 = EmployeeManager.find("a");
-		System.out.println(result2);
+		//System.out.println(result2);
 		List<Employee> result3 = EmployeeManager.findBySalary(50000);
-		System.out.println(result3);
+		//System.out.println(result3);
  		
+		EmployeeManager.selectStar();
+		boolean gone = EmployeeManager.delete("Padlom");
+		System.out.println(gone);
+	
+		EmployeeManager.selectStar();
 	}
 }
